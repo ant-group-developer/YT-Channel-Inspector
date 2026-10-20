@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <title>YT Channel Inspector</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <img src="icons/icon48.png" alt="">
+      <span>Channel Inspector</span>
+    </div>
+    <form id="form" class="search">
+      <svg class="search-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="url" type="text" placeholder="Link kênh hoặc video YouTube" autocomplete="off" spellcheck="false">
+      <select id="count" title="Số video gần nhất cần phân tích">
+        <option value="3">3 video</option>
+        <option value="5" selected>5 video</option>
+        <option value="10">10 video</option>
+        <option value="20">20 video</option>
+      </select>
+      <button id="go" type="submit" title="Kiểm tra">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+    </form>
+    <div id="progress" class="progress" hidden><i></i></div>
+  </header>
+  <div id="status" class="status" hidden></div>
+  <main id="out"></main>
+  <script src="parser.js"></script>
+  <script src="inspector.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
